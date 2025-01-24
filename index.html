@@ -1,33 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>AJAX Example</title>
-    <script>
-        function loadContent(url, callback) {
-                                       
-            const xhr = new XMLHttpRequest();
-            xhr.open('GET', url, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    document.body.innerHTML = xhr.responseText;
-                    callback();
-                }
-            };
-            xhr.send();
-        }
-        function onContentLoaded() {
-            console.log('Content loaded and method executed');
-  if (confirm("你确定要删除这条记录吗？")) {
-} else {
 
-}
-        }
-        function navigateTo(url) {
-            loadContent(url, onContentLoaded);
-        }
-    </script>
-
-    loadContent('https://www.baidu.com')
+<meta http-equiv="refresh" content="0;url=https://blog.csdn.net/weixin_41736188/article/details/85935109" target="_blank"> 
 </head>
 <body>
