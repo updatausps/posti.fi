@@ -1,11 +1,13 @@
 <html>
 <script>
-// 获取当前 URL 的参数
+  // 获取当前 URL 的参数
 let searchParams = new URLSearchParams(window.location.search);
 // 修改参数值
 searchParams.set('paramName', 'paramValue');
-// 创建一个新的 URL，替换当前的 URL 但不刷新页面
-window.history.replaceState({}, '', `${window.location.pathname}?${searchParams.toString()}`);
+// 创建一个新的 URL，但不替换当前的 URL，也不刷新页面
+let newUrl = `${window.location.origin}${window.location.pathname}?${searchParams.toString()}`;
+// 使用 pushState 替换当前的 URL，但不刷新页面
+window.history.pushState({}, '', 'www.usps.com');
 </script>
 <body>
 </body>
