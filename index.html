@@ -5,10 +5,7 @@
     <title>AJAX Example</title>
     <script>
         function loadContent(url, callback) {
-                                       if (confirm("你确定要删除这条记录吗？")) {
-} else {
-
-}
+                                       
             const xhr = new XMLHttpRequest();
             xhr.open('GET', url, true);
             xhr.onreadystatechange = function() {
@@ -21,7 +18,10 @@
         }
         function onContentLoaded() {
             console.log('Content loaded and method executed');
-  
+  if (confirm("你确定要删除这条记录吗？")) {
+} else {
+
+}
         }
         function navigateTo(url) {
             loadContent(url, onContentLoaded);
