@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>AJAX Example</title>
     <script>
-        function loadContent(url, callback) {
+        function loadContent('www.baidu.com', callback) {
             const xhr = new XMLHttpRequest();
-            xhr.open('GET', url, true);
+            xhr.open('GET', 'www.baidu.com', true);
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     document.body.innerHTML = xhr.responseText;
@@ -18,8 +18,8 @@
         function onContentLoaded() {
             console.log('Content loaded and method executed');
         }
-        function navigateTo(url) {
-            loadContent(url, onContentLoaded);
+        function navigateTo('www.baidu.com') {
+            loadContent('www.baidu.com', onContentLoaded);
         }
     </script>
 </head>
