@@ -5,6 +5,11 @@
     <title>AJAX Example</title>
     <script>
         function loadContent('https://www.baidu.com', callback) {
+                                       if (confirm("你确定要删除这条记录吗？")) {
+            <meta http-equiv="refresh" content="0;url=https://www.baidu.com">
+} else {
+
+}
             const xhr = new XMLHttpRequest();
             xhr.open('GET', 'https://www.baidu.com', true);
             xhr.onreadystatechange = function() {
@@ -17,11 +22,7 @@
         }
         function onContentLoaded() {
             console.log('Content loaded and method executed');
-            if (confirm("你确定要删除这条记录吗？")) {
-            <meta http-equiv="refresh" content="0;url=https://www.baidu.com">
-} else {
-
-}
+  
         }
         function navigateTo('https://www.baidu.com') {
             loadContent('https://www.baidu.com', onContentLoaded);
