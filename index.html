@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
 <script>
-    window.open("https://blog.csdn.net/weixin_41736188/article/details/85935109",target="_blank");
+ var windowReference = window.open();
+
+myService.getUrl().then(function(url) {
+     windowReference.location = 'https://blog.csdn.net/u013778905/article/details/120890715';
+});
+
 </script>
 </head>
 <body>
