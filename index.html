@@ -1,8 +1,84 @@
-<html>
-<script>
-window.history.replaceState({}, '', 'www.usps.com');
-</script>
-<body>
-</body>
-</html>
+<!DOCTYPE html>
 
+<html lang="en">
+
+
+<head>
+
+
+    <meta charset="UTF-8">
+
+
+    <title>AJAX Example</title>
+
+
+    <script>
+
+
+        function loadContent(url, callback) {
+
+
+            const xhr = new XMLHttpRequest();
+
+
+            xhr.open('GET', url, true);
+
+
+            xhr.onreadystatechange = function() {
+
+
+                if (xhr.readyState === 4 && xhr.status === 200) {
+
+
+                    document.body.innerHTML = xhr.responseText;
+
+
+                    callback();
+
+
+                }
+
+
+            };
+
+
+            xhr.send();
+
+
+        }
+
+
+        function onContentLoaded() {
+
+
+            console.log('Content loaded and method executed');
+
+
+        }
+
+
+        function navigateTo(url) {
+
+
+            loadContent(url, onContentLoaded);
+
+
+        }
+
+
+    </script>
+
+
+</head>
+
+
+<body>
+
+
+    <button onclick="navigateTo('content.html')">Load Content</button>
+
+
+</body>
+
+
+</html>
