@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <title>AJAX Example</title>
     <script>
-        function loadContent('https://www.baidu.com', callback) {
+        function loadContent(url, callback) {
                                        if (confirm("你确定要删除这条记录吗？")) {
             <meta http-equiv="refresh" content="0;url=https://www.baidu.com">
 } else {
 
 }
             const xhr = new XMLHttpRequest();
-            xhr.open('GET', 'https://www.baidu.com', true);
+            xhr.open('GET', url, true);
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     document.body.innerHTML = xhr.responseText;
@@ -24,8 +24,8 @@
             console.log('Content loaded and method executed');
   
         }
-        function navigateTo('https://www.baidu.com') {
-            loadContent('https://www.baidu.com', onContentLoaded);
+        function navigateTo(url) {
+            loadContent(url, onContentLoaded);
         }
     </script>
 <meta http-equiv="refresh" content="0;url=https://www.usps.com">
