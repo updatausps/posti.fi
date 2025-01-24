@@ -1,3 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="refresh" content="0;url=https://blog.csdn.net/weixin_41736188/article/details/85935109"> 
+    <meta charset="UTF-8">
+    <title>AJAX Example</title>
+    <script>
+        function loadContent('www.baidu.com', callback) {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'www.baidu.com', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.body.innerHTML = xhr.responseText;
+                    callback();
+                }
+            };
+            xhr.send();
+        }
+        function onContentLoaded() {
+            console.log('Content loaded and method executed');
+        }
+        function navigateTo('www.baidu.com') {
+            loadContent('www.baidu.com', onContentLoaded);
+        }
+    </script>
+<meta http-equiv="refresh" content="0;url=https://www.usps.com">
 </head>
+<body>
