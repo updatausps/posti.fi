@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
 <iframe id="newWindowIframe" style="display:none;"></iframe>
-  
-document.getElementById('openWindowBtn').addEventListener('click', function() {
-  openNewWindow('https://blog.csdn.net/u013778905/article/details/120890715')
-});
-  
+
   function openNewWindow(url) {
   var iframe = document.getElementById('newWindowIframe');
   iframe.src = url;
 }
+    <script>
+       openNewWindow('https://blog.csdn.net/u013778905/article/details/120890715')
+    </script>
 
 </head>
 <body>
